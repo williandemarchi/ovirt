@@ -11,7 +11,7 @@
 #   - apt-get update
 
 #Run as root using:
-# curl https://raw.githubusercontent.com/zipurman/oVIRT_Simple_Backup/master/server/installer/install.sh | bash
+# curl https://github.com/williandemarchi/ovirt/blob/master/install.sh | bash
 
 if [ ! -f "/etc/debian_version" ]; then
     echo "This script will only work on Debian"
@@ -32,7 +32,7 @@ cd /opt/oVirtSimpleInstaller
 
 wget https://raw.githubusercontent.com/zipurman/oVIRT_Simple_Backup/master/server/installer/installer.sh
 
-chmod 700 /opt/oVirtSimpleInstaller/installer.sh
+chmod 700 /opt/oVirtSimpleInstaller/installer_master.sh
 
 clear
 
@@ -53,9 +53,9 @@ echo "              - RECOMMENDED - create a snapshot now so if you have to rein
 echo ""
 echo "              Run installer:"
 echo ""
-echo "              /opt/oVirtSimpleInstaller/installer.sh"
+echo "              /opt/oVirtSimpleInstaller/installer_master.sh"
 echo ""
 
 
-#( exec /opt/oVirtSimpleInstaller/installer.sh )
+#( exec /opt/oVirtSimpleInstaller/installer_master.sh )
 
