@@ -26,9 +26,9 @@ echo -e "  \___/ \/   |_|_|   \__| |_____/|_|_| |_| |_| .__/|_|\___| |____/ \__,
 echo -e "                                             | |                                        | |    ";
 echo -e "                                             |_|                                        |_|    ";
 echo -e "\n                 oVirt Simple Backup (WebGUI) Installer Version 0.1.4"
-echo -e "                          Written for Debian 8/9 Installs Only\n\n"
+echo -e "                          Written for Debian 8/9/10 Installs Only\n\n"
 echo -e "It is recommended that your read the following linked page and understand it as best as you can prior to continuing.\n\n"
-echo -e "\thttps://github.com/zipurman/oVIRT_Simple_Backup/blob/master/docs/install_debian.md\n\n"
+echo -e "\thttps://github.com/williandemarchi/ovirt/blob/master/install_debian.md\n\n"
 
 while [[ $readthelinkyn == '' ]] || [[ ! $(fgrep -ix $readthelinkyn <<< 'Y') ]]
 do
@@ -70,7 +70,7 @@ read -e -p "Will you be using this script to migrate VMs from a Xen Server Envir
         then
             echo -e "\n\t** You must create the VMMIGRATE VM in your Xen Server Environment before using this script.\n"
             echo -e "\n\tGo to your XenServer Environment and follow the instructions in STEP 3 of this page:\n"
-            echo -e "\n\t- https://github.com/zipurman/oVIRT_Simple_Backup/blob/master/docs/install_debian.md\n"
+            echo -e "\n\t- https://github.com/williandemarchi/ovirt/blob/master/install_debian.md\n"
             echo -e "\n\t- After installing VMMIGRATE and following the other settings for Xen in the above link, return to running this script on this VM.\n\n"
             exit 0
         fi
@@ -446,7 +446,7 @@ then
         fi
 
         cd /var/www/
-        wget -N --retry-connrefused https://github.com/zipurman/oVIRT_Simple_Backup/archive/master.zip
+        wget -N --retry-connrefused https://github.com/williandemarchi/ovirt/blob/master/oVIRT_Simple_Backup-master.zip
         unzip master.zip
 
         rm /var/www/html -R
@@ -528,7 +528,7 @@ then
 
         #if [[ $(fgrep -ix $xen <<< 'Y') ]]
         #then
-            #THESE STEPS SHOULD ALREADY BE DONE IF INSTRUCTIONS FOLLOWED TO REFER TO https://github.com/zipurman/oVIRT_Simple_Backup/blob/master/docs/install_debian.md
+            #THESE STEPS SHOULD ALREADY BE DONE IF INSTRUCTIONS FOLLOWED TO REFER TO https://github.com/williandemarchi/ovirt/blob/master/install_debian.md
             #echo -e "Updating Xen Server Host\n"
             #SSHPASS="${xenserverpass}" sshpass -e ssh -o StrictHostKeyChecking=no root@${xenserver} 'mkdir /root/.ssh -p && chmod 700 /root/.ssh && echo -e "UseDNS no" >>  /etc/ssh/sshd_config && service sshd restart'
 
