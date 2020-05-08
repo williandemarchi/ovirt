@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Written by Preston Lord aka Zipur
-# Last Updated Nov 1, 2018
+# Written by Willian De Marchi
+# Last Updated May 8, 2020
 # written for Debian ONLY!!
 
 if [ ! -f "/etc/debian_version" ]; then
